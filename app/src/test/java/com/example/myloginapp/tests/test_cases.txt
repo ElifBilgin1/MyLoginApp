@@ -1,0 +1,41 @@
+Test Cases:
+
+S1 - Successful login
+    User goes to login page
+    User fills Email textbox with "admin@fireflyon.com"
+    User fills password textbox with "admin"
+    User clicks to "Login" button
+    User see "Welcome Admin" text on page
+
+S2 - Entering e-mails that do not comply with the format
+    User goes to login page
+    User fills Email textbox with "admin"
+    User clicks to "Login" button
+    User see "Email format not correct" error message
+
+S3 - Failure to fill in mandatory fields
+    User goes to login page
+    User clicks to "Login" button
+    User see "should not be empty" error message
+
+S4 - Entering a value less than 5 characters in the password field
+    User goes to login page
+    User fills Email textbox with "admin@fireflyon.com"
+    User fills password textbox with "test"
+    User clicks to "Login" button
+    User see "Password should be minimum 5 characters" error message
+
+S5 - Login with wrong password
+    User goes to login page
+    User fills Email textbox with "admin@fireflyon.com"
+    User fills password textbox with "admin123"
+    User clicks to "Login" button
+    User see "LOGIN FAILED!" error message
+
+S6 - Successful logout
+    User goes to login page
+    User fills Email textbox with "admin@fireflyon.com"
+    User fills password textbox with "admin"
+    User clicks to "Login" button
+    User clicks to "Logout" button
+    User see "Sign in" text on page
